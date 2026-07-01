@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valhalla Ink — Премиум Тату-Салон в Стиле Викингов</title>
+    <!-- Google Fonts for premium Viking aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="rune-logo">ᚠ</span>
+                <span class="logo-text">VALHALLA <span class="accent">INK</span></span>
+            </a>
+            <nav class="nav">
+                <a href="#about" class="nav-link">О студии</a>
+                <a href="#styles" class="nav-link">Стили</a>
+                <a href="#gallery" class="nav-link">Галерея</a>
+                <a href="#calculator" class="nav-link">Калькулятор</a>
+                <a href="#masters" class="nav-link">Мастера</a>
+                <a href="#contacts" class="nav-link btn btn-outline nav-btn">Записаться</a>
+            </nav>
+            <button class="burger" id="burger-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">О студии</a>
+        <a href="#styles" class="mobile-link">Стили</a>
+        <a href="#gallery" class="mobile-link">Галерея</a>
+        <a href="#calculator" class="mobile-link">Калькулятор</a>
+        <a href="#masters" class="mobile-link">Мастера</a>
+        <a href="#contacts" class="mobile-link btn btn-primary">Записаться</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.95)), url('images/hero_bg.png');"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Древняя Эстетика Севера <br><span class="accent">На Твоей Коже</span></h1>
+            <p class="hero-subtitle">Премиальные скандинавские татуировки от лучших мастеров. Руны, орнаменты, реализм и дух викингов в каждой детали.</p>
+            <div class="hero-actions">
+                <a href="#contacts" class="btn btn-primary btn-lg">Занять место в Вальхалле</a>
+                <a href="#calculator" class="btn btn-outline btn-lg">Рассчитать стоимость</a>
+            </div>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <span class="feature-icon">ᛟ</span>
+                    <span class="feature-text">Авторские эскизы</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">ᛉ</span>
+                    <span class="feature-text">100% Стерильность</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">ᚦ</span>
+                    <span class="feature-text">Пожизненный уход</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="about-info">
+                    <h2 class="section-title">Обитель <br><span class="accent">Северных Традиций</span></h2>
+                    <p class="text-lead">VALHALLA INK — это не просто тату-салон, а закрытый клан единомышленников, возрождающих древнюю сакральную культуру Скандинавии.</p>
+                    <p>Каждая татуировка для нас — это ритуал. Мы не делаем шаблонных «картинок из интернета». Наши художники разрабатывают индивидуальные орнаменты, основываясь на археологических находках, резьбе по дереву и камням эпохи викингов.</p>
+                    <p>Мы чтим традиции прошлого, но работаем на самом современном и безопасном оборудовании, соблюдая строжайшие медицинские стандарты стерильности.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-num accent">7+</span>
+                            <span class="stat-label">Лет опыта мастеров</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num accent">3000+</span>
+                            <span class="stat-label">Довольных воинов</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num accent">100%</span>
+                            <span class="stat-label">Уникальность эскизов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-wrapper">
+                    <img src="images/studio.png" alt="Интерьер Valhalla Ink" class="about-image shadow-premium">
+                    <div class="image-accent-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Styles Section -->
+    <section class="styles" id="styles">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Наши <span class="accent">Направления</span></h2>
+                <p class="section-subtitle">Каждый стиль имеет свою историю и сакральное значение. Выберите то, что откликнется вашей душе.</p>
+            </div>
+            
+            <div class="grid grid-3 styles-grid">
+                <!-- Style 1 -->
+                <div class="style-card card-premium">
+                    <div class="style-icon">ᛞ</div>
+                    <h3>Орнаментал & Нордик</h3>
+                    <p>Древнескандинавские плетеные узоры, рунические вязи, элементы резьбы по дереву из раскопок в Осеберге. Идеально ложится по анатомии тела, подчеркивая рельеф мышц.</p>
+                    <ul class="style-features">
+                        <li><i class="fa-solid fa-check text-accent"></i> Рукава и воротники</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Сакральные руны и вязи</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Геометрическая точность</li>
+                    </ul>
+                </div>
+                
+                <!-- Style 2 -->
+                <div class="style-card card-premium">
+                    <div class="style-icon">ᚠ</div>
+                    <h3>Черный Реализм</h3>
+                    <p>Фотореалистичные портреты скандинавских богов (Один, Тор, Фрейя), легендарных воинов, воронов Хугина и Мунина, волков Гери и Фреки. Глубокие тени и высокая детализация.</p>
+                    <ul class="style-features">
+                        <li><i class="fa-solid fa-check text-accent"></i> Портретная точность</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Трехмерный объем</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Долговечный пигмент</li>
+                    </ul>
+                </div>
+
+                <!-- Style 3 -->
+                <div class="style-card card-premium">
+                    <div class="style-icon">ᚱ</div>
+                    <h3>Блэкворк & Дотворк</h3>
+                    <p>Плотный черный прокрас в сочетании с точечной техникой нанесения теней. Отлично подходит для создания масштабных мистических пейзажей, волков, воронов и перекрытия старых работ.</p>
+                    <ul class="style-features">
+                        <li><i class="fa-solid fa-check text-accent"></i> Точечный градиент (дотворк)</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Глубокий черный цвет</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Перекрытие (Cover-up)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Стены <span class="accent">Нашей Славы</span></h2>
+                <p class="section-subtitle">Фотографии реальных работ, выполненных в нашей студии. Никаких чужих эскизов — только чистая гордость.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Gallery 1 -->
+                <div class="gallery-item">
+                    <img src="images/sleeve.png" alt="Скандинавский орнаментальный рукав" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <span class="gallery-tag">Орнаментал</span>
+                            <h3>Рукав «Узлы Иггдрасиля»</h3>
+                            <p>Мастер Рагнар. 4 сеанса по 6 часов.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2 -->
+                <div class="gallery-item">
+                    <img src="images/odin.png" alt="Реалистичная татуировка Один" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <span class="gallery-tag">Реализм</span>
+                            <h3>Один Всеотче и Вороны</h3>
+                            <p>Мастер Лагерта. 3 сеанса.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 3 -->
+                <div class="gallery-item">
+                    <img src="images/fenrir.png" alt="Дотворк тату волка Фенрира" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <span class="gallery-tag">Блэкворк / Дотворк</span>
+                            <h3>Ярость Фенрира и Руны</h3>
+                            <p>Мастер Рагнар. 2 сеанса.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="grid grid-2-wide card-premium calc-wrapper">
+                <div class="calc-inputs">
+                    <h2 class="section-title-sm">Калькулятор <span class="accent">Сеанса</span></h2>
+                    <p class="text-muted">Ответьте на 3 простых вопроса, чтобы узнать ориентировочную стоимость и количество сеансов для вашей татуировки.</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">1. Желаемый размер татуировки</label>
+                        <div class="calc-options grid-3-flat">
+                            <div class="calc-opt-box active" data-name="size" data-value="small" data-price="8000" data-time="2-3 часа">
+                                <span class="opt-title">Миниатюра</span>
+                                <span class="opt-desc">До 10х10 см</span>
+                            </div>
+                            <div class="calc-opt-box" data-name="size" data-value="medium" data-price="18000" data-time="1 сеанс (6ч)">
+                                <span class="opt-title">Средний размер</span>
+                                <span class="opt-desc">Предплечье / Икра</span>
+                            </div>
+                            <div class="calc-opt-box" data-name="size" data-value="large" data-price="45000" data-time="3-4 сеанса">
+                                <span class="opt-title">Крупный проект</span>
+                                <span class="opt-desc">Рукав / Спина</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">2. Уровень детализации и стиль</label>
+                        <div class="calc-options grid-3-flat">
+                            <div class="calc-opt-box active" data-name="style" data-value="rune" data-multiplier="1.0">
+                                <span class="opt-title">Руны и символы</span>
+                                <span class="opt-desc">Графика, контур</span>
+                            </div>
+                            <div class="calc-opt-box" data-name="style" data-value="ornament" data-multiplier="1.2">
+                                <span class="opt-title">Сложный орнамент</span>
+                                <span class="opt-desc">Симметрия, узлы</span>
+                            </div>
+                            <div class="calc-opt-box" data-name="style" data-value="realism" data-multiplier="1.5">
+                                <span class="opt-title">Реализм / Портрет</span>
+                                <span class="opt-desc">Тени, лица, объем</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">3. Наличие старой татуировки под перекрытие?</label>
+                        <div class="calc-options grid-2-flat">
+                            <div class="calc-opt-box active" data-name="coverup" data-value="no" data-add="0">
+                                <span class="opt-title">Нет (Чистая кожа)</span>
+                            </div>
+                            <div class="calc-opt-box" data-name="coverup" data-value="yes" data-add="5000">
+                                <span class="opt-title">Да (Требуется Cover-Up)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-results text-center">
+                    <div class="shield-indicator">
+                        <div class="shield-inner">
+                            <span class="shield-rune">᚛ᛟ᚜</span>
+                            <div class="price-value"><span id="calc-price">8 000</span> ₽</div>
+                            <div class="price-label">Ориентировочная цена</div>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <div class="res-detail-item">
+                            <span class="detail-label">Примерное время:</span>
+                            <strong id="calc-time" class="accent">2-3 часа</strong>
+                        </div>
+                        <div class="res-detail-item">
+                            <span class="detail-label">Разработка эскиза:</span>
+                            <strong class="text-green">Бесплатно (входит в сеанс)</strong>
+                        </div>
+                    </div>
+                    <p class="calc-notice">Точный расчет производится мастером на бесплатной консультации после детального разбора вашей идеи.</p>
+                    <a href="#contacts" class="btn btn-primary btn-block">Забронировать эту стоимость</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masters Section -->
+    <section class="masters" id="masters">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Мастера <span class="accent">Вальхаллы</span></h2>
+                <p class="section-subtitle">Наши татуировщики — это опытные художники, посвятившие годы изучению северной эстетики.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- Master 1 -->
+                <div class="master-card card-premium">
+                    <div class="master-img-wrapper">
+                        <div class="master-placeholder-img m1-img"></div>
+                    </div>
+                    <div class="master-info">
+                        <h3>Рагнар</h3>
+                        <span class="master-role accent">Основатель, орнаменталист</span>
+                        <p class="master-bio">Специализируется на масштабных рукавах, геометрических узорах и точечной технике (дотворк). Опыт работы более 10 лет.</p>
+                        <div class="master-socials">
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-vk"></i></a>
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master 2 -->
+                <div class="master-card card-premium">
+                    <div class="master-img-wrapper">
+                        <div class="master-placeholder-img m2-img"></div>
+                    </div>
+                    <div class="master-info">
+                        <h3>Лагерта</h3>
+                        <span class="master-role accent">Мастер реализма</span>
+                        <p class="master-bio">Создает потрясающие портреты богов и воинов с ювелирной детализацией. Работает в технике Black & Grey.</p>
+                        <div class="master-socials">
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-vk"></i></a>
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master 3 -->
+                <div class="master-card card-premium">
+                    <div class="master-img-wrapper">
+                        <div class="master-placeholder-img m3-img"></div>
+                    </div>
+                    <div class="master-info">
+                        <h3>Бьёрн</h3>
+                        <span class="master-role accent">Специалист по рунам и графике</span>
+                        <p class="master-bio">Мастер тонких линий и священных рунических ставов (Гальдраставы). Разрабатывает уникальные защитные обереги.</p>
+                        <div class="master-socials">
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-vk"></i></a>
+                            <a href="#" class="master-social-link"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Contact Section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="grid grid-2 card-premium contact-wrapper">
+                <div class="contact-info-block">
+                    <h2 class="section-title-sm">Приди на <span class="accent">Совет Клана</span></h2>
+                    <p class="contact-desc">Заполни форму, чтобы получить бесплатную консультацию. Мы поможем определиться с идеей, разработаем эскиз и рассчитаем точное время.</p>
+                    
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <div>
+                                <h4>Адрес Чертога</h4>
+                                <p>г. Москва, ул. Руническая, д. 9 (м. Курская)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <div>
+                                <h4>Связь с ярлом</h4>
+                                <p>+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <div>
+                                <h4>Почта воронов</h4>
+                                <p>odin@valhallaink.ru</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="working-hours">
+                        <h4>Часы приема воинов:</h4>
+                        <p>Каждый день без выходных с 12:00 до 21:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-block">
+                    <form id="booking-form" class="booking-form">
+                        <h3 class="form-title">Запись на консультацию</h3>
+                        
+                        <div class="form-group">
+                            <input type="text" id="user-name" name="name" class="form-input" placeholder=" " required>
+                            <label for="user-name" class="floating-label">Ваше Имя / Прозвище</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="user-phone" name="phone" class="form-input" placeholder=" " required>
+                            <label for="user-phone" class="floating-label">Телефон для связи</label>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="tattoo-style" name="style" class="form-input form-select">
+                                <option value="" disabled selected hidden></option>
+                                <option value="ornamental">Орнаментал / Нордик</option>
+                                <option value="realism">Черный Реализм</option>
+                                <option value="blackwork">Блэкворк / Дотворк</option>
+                                <option value="other">Другое / Пока не знаю</option>
+                            </select>
+                            <label for="tattoo-style" class="floating-label select-label">Стиль татуировки</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="user-idea" name="idea" class="form-input form-textarea" placeholder=" "></textarea>
+                            <label for="user-idea" class="floating-label">Опишите вашу идею тату</label>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="user-agreed" required checked>
+                            <label for="user-agreed">Я соглашаюсь на обработку персональных данных и готов к боли</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">Отправить зов</button>
+                    </form>
+                    <div id="form-success" class="form-success-message hidden">
+                        <span class="success-rune">᚛ᛗ᚜</span>
+                        <h3>Твой зов услышан!</h3>
+                        <p>Мастер свяжется с тобой в течение 30 минут, чтобы согласовать время консультации.</p>
+                        <button class="btn btn-outline" id="reset-form-btn">Отправить еще раз</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="rune-logo">ᚠ</span>
+                    <span class="logo-text">VALHALLA <span class="accent">INK</span></span>
+                </a>
+                <p class="footer-desc">Премиум татуировки, вдохновленные наследием древнего Севера. Только индивидуальный подход, безукоризненная стерильность и преданность искусству.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Чертоги</h4>
+                <a href="#about" class="footer-link">О студии</a>
+                <a href="#styles" class="footer-link">Направления</a>
+                <a href="#gallery" class="footer-link">Наши работы</a>
+                <a href="#calculator" class="footer-link">Калькулятор</a>
+            </div>
+            <div class="footer-social">
+                <h4>Связаться</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="VKontakte"><i class="fa-brands fa-vk"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <p class="legal-text">© 2026 VALHALLA INK. Все права защищены. 18+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
