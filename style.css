@@ -1277,3 +1277,440 @@ p {
     margin-top: 2rem;
     margin-bottom: 0;
 }
+
+/* ----------------------------------------------------
+   NEW COMMERCIAL SECTIONS & UX STYLES
+   ---------------------------------------------------- */
+
+/* Demo Badge */
+.demo-badge {
+    background-color: #ff9800;
+    color: #000000;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    font-family: var(--font-body);
+}
+
+.demo-badge span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+body.has-demo-badge {
+    padding-top: 36px;
+}
+
+@media (max-width: 768px) {
+    body.has-demo-badge {
+        padding-top: 50px;
+    }
+}
+
+/* Services Block */
+.services {
+    padding: 8rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.service-card {
+    padding: 3rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--bg-card);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-gold);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1.2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.service-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    font-family: var(--font-headers);
+}
+
+.service-price {
+    font-size: 1.4rem;
+    font-family: var(--font-headers);
+    font-weight: 700;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    color: var(--color-text-muted);
+}
+
+.service-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.service-details li {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.service-details li i {
+    color: var(--color-accent);
+}
+
+/* FAQ Accordion Block */
+.faq {
+    padding: 8rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    border: 1px solid var(--color-border);
+    background-color: var(--bg-card);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: rgba(200, 155, 79, 0.4);
+}
+
+.faq-item.active {
+    border-color: var(--color-accent);
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.faq-item.active .faq-question::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+    padding: 0 2rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px; /* Responsive auto-growth fallback */
+    padding: 0 2rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0), padding 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+/* Steps Block */
+.steps-section {
+    padding: 8rem 0;
+    background-color: var(--bg-primary);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.step-card {
+    padding: 2.5rem 2rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-gold);
+}
+
+.step-num {
+    font-size: 3rem;
+    font-family: var(--font-headers);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.step-card h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    font-family: var(--font-headers);
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+/* Map Placeholder Widget */
+.map-placeholder-wrapper {
+    margin-top: 2rem;
+    height: 220px;
+    position: relative;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+}
+
+.map-placeholder-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.map-placeholder-link:hover .map-overlay {
+    background-color: rgba(200, 155, 79, 0.25);
+    color: var(--color-accent-light);
+}
+
+.map-placeholder-icon {
+    font-size: 2.2rem;
+    color: var(--color-accent);
+}
+
+.map-static-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    background-image: radial-gradient(circle at center, transparent 30%, #0a0a0a 100%), 
+                      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0 50 h100 M50 0 v100 M25 25 h50 v50 h-50 z" stroke="%232c2c2c" stroke-width="1.5" fill="none" opacity="0.4"/></svg>');
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+/* Form Validation Styles */
+.error-label {
+    font-size: 0.75rem;
+    color: #ff5252;
+    display: block;
+    margin-top: 0.4rem;
+    height: 1rem;
+    line-height: 1;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.form-input.invalid {
+    border-bottom-color: #ff5252 !important;
+}
+
+.form-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-checkbox-group.invalid input[type="checkbox"] {
+    outline: 2px solid #ff5252;
+    outline-offset: 1px;
+}
+
+/* Button Loading State */
+.btn.loading {
+    color: transparent !important;
+    pointer-events: none;
+    position: relative;
+}
+
+.btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.btn-primary.loading::after {
+    border: 3px solid rgba(0, 0, 0, 0.15);
+    border-top-color: #000000;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Semantic Masters Styles */
+.master-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+    display: block;
+}
+
+.master-card:hover .master-img {
+    transform: scale(1.05);
+}
+
+/* ----------------------------------------------------
+   RESPONSIVENESS & MOBILE BUG FIXES (320px - 576px)
+   ---------------------------------------------------- */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2.4rem;
+    }
+    
+    .section-title-sm {
+        font-size: 2rem;
+    }
+    
+    .services, .styles, .gallery, .calculator-section, .masters, .faq, .steps-section, .contacts {
+        padding: 5rem 0;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .step-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .faq-question {
+        padding: 1.2rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1.2rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 1.2rem 1.5rem 1.2rem;
+    }
+    
+    .contact-wrapper {
+        padding: 2rem 1.2rem !important;
+    }
+    
+    .calc-wrapper {
+        padding: 2rem 1.2rem !important;
+    }
+    
+    /* Ensure the mobile menu aligns correctly and doesn't overlap text */
+    .mobile-menu {
+        padding: 8rem 2rem 4rem 2rem;
+    }
+    
+    .mobile-link {
+        font-size: 1.6rem;
+    }
+}
+

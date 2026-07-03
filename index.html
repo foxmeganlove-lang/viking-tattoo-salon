@@ -4,13 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valhalla Ink — Премиум Тату-Салон в Стиле Викингов</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Премиум тату-салон в скандинавском и нордическом стиле. Авторские эскизы, рунические орнаменты, дотворк и черный реализм. Безукоризненная стерильность.">
+    <meta name="keywords" content="тату салон, тату викинги, скандинавские татуировки, руны тату, орнаментал тату, реализм тату, Москва тату">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="">
+    
+    <!-- Open Graph for Social Networks -->
+    <meta property="og:title" content="Valhalla Ink — Премиум Тату-Салон в Стиле Викингов">
+    <meta property="og:description" content="Авторские скандинавские татуировки, рунические орнаменты и черный реализм. Разработка индивидуального эскиза бесплатно.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/hero_bg.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>ᚠ</text></svg>">
+    
     <!-- Google Fonts for premium Viking aesthetics -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Load Configuration first -->
+    <script src="config.js"></script>
+    
     <link rel="stylesheet" href="style.css">
+    
+    <!-- LocalBusiness Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TattooParlor",
+      "name": "Valhalla Ink",
+      "image": "images/studio.png",
+      "url": "",
+      "telephone": "+7 (999) 123-45-67",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Руническая, д. 9",
+        "addressLocality": "Москва",
+        "postalCode": "101000",
+        "addressCountry": "RU"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "12:00",
+        "closes": "21:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 <body>
 
@@ -23,10 +77,11 @@
             </a>
             <nav class="nav">
                 <a href="#about" class="nav-link">О студии</a>
+                <a href="#services" class="nav-link">Услуги</a>
                 <a href="#styles" class="nav-link">Стили</a>
                 <a href="#gallery" class="nav-link">Галерея</a>
-                <a href="#calculator" class="nav-link">Калькулятор</a>
                 <a href="#masters" class="nav-link">Мастера</a>
+                <a href="#faq" class="nav-link">Вопросы</a>
                 <a href="#contacts" class="nav-link btn btn-outline nav-btn">Записаться</a>
             </nav>
             <button class="burger" id="burger-btn" aria-label="Открыть меню">
@@ -40,10 +95,11 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu">
         <a href="#about" class="mobile-link">О студии</a>
+        <a href="#services" class="mobile-link">Услуги</a>
         <a href="#styles" class="mobile-link">Стили</a>
         <a href="#gallery" class="mobile-link">Галерея</a>
-        <a href="#calculator" class="mobile-link">Калькулятор</a>
         <a href="#masters" class="mobile-link">Мастера</a>
+        <a href="#faq" class="mobile-link">Вопросы</a>
         <a href="#contacts" class="mobile-link btn btn-primary">Записаться</a>
     </div>
 
@@ -102,6 +158,43 @@
                 <div class="about-image-wrapper">
                     <img src="images/studio.png" alt="Интерьер Valhalla Ink" class="about-image shadow-premium">
                     <div class="image-accent-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Наши <span class="accent">Услуги</span></h2>
+                <p class="section-subtitle">Честные цены без скрытых доплат. В стоимость каждого сеанса уже входит разработка индивидуального эскиза и набор для ухода.</p>
+            </div>
+            <div class="grid grid-2 services-grid" id="services-container">
+                <!-- Services populated dynamically from config.js -->
+                <div class="service-card card-premium">
+                    <div class="service-header">
+                        <h3>Художественная татуировка</h3>
+                        <span class="service-price accent">от 5 000 ₽</span>
+                    </div>
+                    <p>Нанесение татуировок любой сложности и масштаба по индивидуальным проектам.</p>
+                    <ul class="service-details">
+                        <li><i class="fa-solid fa-square-check accent"></i> Черно-белая и цветная татуировка</li>
+                        <li><i class="fa-solid fa-square-check accent"></i> Скандинавские орнаменты и геометрия</li>
+                        <li><i class="fa-solid fa-square-check accent"></i> Черный реализм и дотворк</li>
+                    </ul>
+                </div>
+                <div class="service-card card-premium">
+                    <div class="service-header">
+                        <h3>Перекрытие и коррекция</h3>
+                        <span class="service-price accent">от 6 000 ₽</span>
+                    </div>
+                    <p>Профессиональное исправление старых или некачественных работ, маскировка шрамов.</p>
+                    <ul class="service-details">
+                        <li><i class="fa-solid fa-square-check accent"></i> Полное перекрытие старой тату (Cover-up)</li>
+                        <li><i class="fa-solid fa-square-check accent"></i> Реставрация и обновление цвета</li>
+                        <li><i class="fa-solid fa-square-check accent"></i> Перекрытие послеродовых и операционных шрамов</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -166,7 +259,7 @@
             <div class="gallery-grid">
                 <!-- Gallery 1 -->
                 <div class="gallery-item">
-                    <img src="images/sleeve.png" alt="Скандинавский орнаментальный рукав" class="gallery-img">
+                    <img src="images/sleeve.png" alt="Скандинавский орнаментальный рукав" class="gallery-img" width="400" height="500" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-info">
                             <span class="gallery-tag">Орнаментал</span>
@@ -178,7 +271,7 @@
 
                 <!-- Gallery 2 -->
                 <div class="gallery-item">
-                    <img src="images/odin.png" alt="Реалистичная татуировка Один" class="gallery-img">
+                    <img src="images/odin.png" alt="Реалистичная татуировка Один" class="gallery-img" width="400" height="500" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-info">
                             <span class="gallery-tag">Реализм</span>
@@ -190,7 +283,7 @@
 
                 <!-- Gallery 3 -->
                 <div class="gallery-item">
-                    <img src="images/fenrir.png" alt="Дотворк тату волка Фенрира" class="gallery-img">
+                    <img src="images/fenrir.png" alt="Дотворк тату волка Фенрира" class="gallery-img" width="400" height="500" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-info">
                             <span class="gallery-tag">Блэкворк / Дотворк</span>
@@ -293,56 +386,97 @@
                 <p class="section-subtitle">Наши татуировщики — это опытные художники, посвятившие годы изучению северной эстетики.</p>
             </div>
             
-            <div class="grid grid-3">
-                <!-- Master 1 -->
+            <div class="grid grid-3" id="masters-container">
+                <!-- Masters populated dynamically from config.js -->
                 <div class="master-card card-premium">
                     <div class="master-img-wrapper">
-                        <div class="master-placeholder-img m1-img"></div>
+                        <img src="images/master_ragnar.png" alt="Мастер Рагнар" class="master-img" width="350" height="420" loading="lazy">
                     </div>
                     <div class="master-info">
                         <h3>Рагнар</h3>
                         <span class="master-role accent">Основатель, орнаменталист</span>
                         <p class="master-bio">Специализируется на масштабных рукавах, геометрических узорах и точечной технике (дотворк). Опыт работы более 10 лет.</p>
                         <div class="master-socials">
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-vk"></i></a>
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-telegram"></i></a>
+                            <a href="#" class="master-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="master-social-link" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+                            <a href="#" class="master-social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Master 2 -->
                 <div class="master-card card-premium">
                     <div class="master-img-wrapper">
-                        <div class="master-placeholder-img m2-img"></div>
+                        <img src="images/master_lagerta.png" alt="Мастер Лагерта" class="master-img" width="350" height="420" loading="lazy">
                     </div>
                     <div class="master-info">
                         <h3>Лагерта</h3>
                         <span class="master-role accent">Мастер реализма</span>
                         <p class="master-bio">Создает потрясающие портреты богов и воинов с ювелирной детализацией. Работает в технике Black & Grey.</p>
                         <div class="master-socials">
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-vk"></i></a>
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-telegram"></i></a>
+                            <a href="#" class="master-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="master-social-link" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+                            <a href="#" class="master-social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Master 3 -->
                 <div class="master-card card-premium">
                     <div class="master-img-wrapper">
-                        <div class="master-placeholder-img m3-img"></div>
+                        <img src="images/master_bjorn.png" alt="Мастер Бьёрн" class="master-img" width="350" height="420" loading="lazy">
                     </div>
                     <div class="master-info">
                         <h3>Бьёрн</h3>
                         <span class="master-role accent">Специалист по рунам и графике</span>
                         <p class="master-bio">Мастер тонких линий и священных рунических ставов (Гальдраставы). Разрабатывает уникальные защитные обереги.</p>
                         <div class="master-socials">
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-vk"></i></a>
-                            <a href="#" class="master-social-link"><i class="fa-brands fa-telegram"></i></a>
+                            <a href="#" class="master-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="master-social-link" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+                            <a href="#" class="master-social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Вопросы и <span class="accent">Ответы</span></h2>
+                <p class="section-subtitle">Отвечаем на частые опасения и вопросы воинов перед первым шагом в наш чертог.</p>
+            </div>
+            <div class="faq-container" id="faq-container">
+                <!-- FAQ items populated dynamically from config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section" id="steps">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Путь <span class="accent">Воина</span></h2>
+                <p class="section-subtitle">От идеи в твоей голове до вечного знака на твоей коже — всего 4 простых шага.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card card-premium">
+                    <div class="step-num accent">01</div>
+                    <h3>Заявка</h3>
+                    <p>Заполни форму на сайте или напиши нам в мессенджер. Мы свяжемся с тобой для первого знакомства.</p>
+                </div>
+                <div class="step-card card-premium">
+                    <div class="step-num accent">02</div>
+                    <h3>Консультация</h3>
+                    <p>Бесплатно обсудим твою идею, подберем мастера и сделаем предварительный набросок эскиза.</p>
+                </div>
+                <div class="step-card card-premium">
+                    <div class="step-num accent">03</div>
+                    <h3>Выбор даты</h3>
+                    <p>Согласуем удобное время сеанса. Для бронирования даты вносится небольшой фиксированный залог.</p>
+                </div>
+                <div class="step-card card-premium">
+                    <div class="step-num accent">04</div>
+                    <h3>Сеанс</h3>
+                    <p>Приходи в назначенный час. Наносим татуировку в уютной атмосфере и дарим набор для ухода.</p>
                 </div>
             </div>
         </div>
@@ -358,57 +492,81 @@
                     
                     <div class="contact-list">
                         <div class="contact-item">
-                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i>
                             <div>
                                 <h4>Адрес Чертога</h4>
-                                <p>г. Москва, ул. Руническая, д. 9 (м. Курская)</p>
+                                <p class="cfg-address">г. Москва, ул. Руническая, д. 9 (м. Курская)</p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <i class="fa-solid fa-phone contact-icon" aria-hidden="true"></i>
                             <div>
                                 <h4>Связь с ярлом</h4>
-                                <p>+7 (999) 123-45-67</p>
+                                <p><a href="tel:+79991234567" class="cfg-phone">+7 (999) 123-45-67</a></p>
                             </div>
                         </div>
 
                         <div class="contact-item">
-                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <i class="fa-solid fa-envelope contact-icon" aria-hidden="true"></i>
                             <div>
                                 <h4>Почта воронов</h4>
-                                <p>odin@valhallaink.ru</p>
+                                <p><a href="mailto:odin@valhallaink.ru" class="cfg-email">odin@valhallaink.ru</a></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="working-hours">
                         <h4>Часы приема воинов:</h4>
-                        <p>Каждый день без выходных с 12:00 до 21:00</p>
+                        <p class="cfg-hours">Каждый день без выходных с 12:00 до 21:00</p>
+                    </div>
+                    
+                    <!-- Map Placeholder Widget -->
+                    <div class="map-placeholder-wrapper">
+                        <a href="https://yandex.ru/maps/-/CDuP5B9D" target="_blank" rel="noopener" class="map-placeholder-link" id="cfg-map-link">
+                            <div class="map-overlay">
+                                <i class="fa-solid fa-map-location-dot map-placeholder-icon" aria-hidden="true"></i>
+                                <span>Открыть интерактивную карту</span>
+                            </div>
+                            <div class="map-static-bg"></div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="contact-form-block">
-                    <form id="booking-form" class="booking-form">
+                    <form id="booking-form" class="booking-form" novalidate>
                         <h3 class="form-title">Запись на консультацию</h3>
                         
                         <div class="form-group">
-                            <input type="text" id="user-name" name="name" class="form-input" placeholder=" " required>
-                            <label for="user-name" class="floating-label">Ваше Имя / Прозвище</label>
+                            <input type="text" id="user-name" name="name" class="form-input" placeholder=" " required minlength="2">
+                            <label for="user-name" class="floating-label">Ваше Имя / Прозвище *</label>
+                            <span class="error-label" id="name-error"></span>
                         </div>
 
                         <div class="form-group">
                             <input type="tel" id="user-phone" name="phone" class="form-input" placeholder=" " required>
-                            <label for="user-phone" class="floating-label">Телефон для связи</label>
+                            <label for="user-phone" class="floating-label">Телефон для связи *</label>
+                            <span class="error-label" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="user-contact-method" name="contact_method" class="form-input form-select" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="Telegram">Telegram</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="Звонок">Телефонный звонок</option>
+                            </select>
+                            <label for="user-contact-method" class="floating-label select-label">Как с вами связаться? *</label>
+                            <span class="error-label" id="method-error"></span>
                         </div>
 
                         <div class="form-group">
                             <select id="tattoo-style" name="style" class="form-input form-select">
                                 <option value="" disabled selected hidden></option>
-                                <option value="ornamental">Орнаментал / Нордик</option>
-                                <option value="realism">Черный Реализм</option>
-                                <option value="blackwork">Блэкворк / Дотворк</option>
-                                <option value="other">Другое / Пока не знаю</option>
+                                <option value="Орнаментал / Нордик">Орнаментал / Нордик</option>
+                                <option value="Черный Реализм">Черный Реализм</option>
+                                <option value="Блэкворк / Дотворк">Блэкворк / Дотворк</option>
+                                <option value="Другое / Пока не знаю">Другое / Пока не знаю</option>
                             </select>
                             <label for="tattoo-style" class="floating-label select-label">Стиль татуировки</label>
                         </div>
@@ -418,17 +576,22 @@
                             <label for="user-idea" class="floating-label">Опишите вашу идею тату</label>
                         </div>
 
-                        <div class="form-checkbox">
-                            <input type="checkbox" id="user-agreed" required checked>
-                            <label for="user-agreed">Я соглашаюсь на обработку персональных данных и готов к боли</label>
+                        <div class="form-checkbox-group">
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="user-agreed" required checked>
+                                <label for="user-agreed">Я соглашаюсь на обработку персональных данных и готов к боли *</label>
+                            </div>
+                            <span class="error-label" id="agreement-error"></span>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">Отправить зов</button>
                     </form>
+                    
+                    <!-- Success Message Widget -->
                     <div id="form-success" class="form-success-message hidden">
                         <span class="success-rune">᚛ᛗ᚜</span>
-                        <h3>Твой зов услышан!</h3>
-                        <p>Мастер свяжется с тобой в течение 30 минут, чтобы согласовать время консультации.</p>
+                        <h3 id="success-title">Твой зов услышан!</h3>
+                        <p id="success-text">Мастер свяжется с тобой в течение 30 минут, чтобы согласовать время консультации.</p>
                         <button class="btn btn-outline" id="reset-form-btn">Отправить еще раз</button>
                     </div>
                 </div>
