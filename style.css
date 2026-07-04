@@ -501,6 +501,7 @@ p {
 
 .about-image-wrapper {
     position: relative;
+    align-self: center;
 }
 
 .about-image {
