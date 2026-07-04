@@ -15,15 +15,15 @@ window.CONFIG = {
     STUDIO_DESCRIPTION: 'Премиум татуировки, вдохновленные наследием древнего Севера. Только индивидуальный подход, безукоризненная стерильность и преданность искусству.',
 
     // === КОНТАКТЫ ===
-    PHONE: '+7 (999) 123-45-67',
-    EMAIL: 'odin@valhallaink.ru',
+    PHONE: '+7 (495) 789-45-67',
+    EMAIL: 'demo@valhalla-ink-studio.example',
     ADDRESS: 'г. Москва, ул. Руническая, д. 9 (м. Курская)',
     HOURS: 'Каждый день без выходных с 12:00 до 21:00',
     MAP_LINK: 'https://yandex.ru/maps/-/CDuP5B9D', // Ссылка при клике на интерактивную карту-заглушку
 
     // === СОЦИАЛЬНЫЕ СЕТИ ===
     TELEGRAM_URL: 'https://t.me/valhallaink_demo',
-    WHATSAPP_URL: 'https://wa.me/79991234567',
+    WHATSAPP_URL: 'https://wa.me/74957894567',
     VK_URL: 'https://vk.com/valhallaink_demo',
     
     // INSTAGRAM_URL закомментирован, так как Instagram заблокирован в РФ и требует VPN.
@@ -103,7 +103,7 @@ window.CONFIG = {
             name: 'Рагнар',
             role: 'Основатель, орнаменталист',
             bio: 'Специализируется на масштабных рукавах, геометрических узорах и точечной технике (дотворк). Опыт работы более 10 лет.',
-            image: 'images/master_ragnar.png',
+            image: 'images/master_ragnar.webp',
             socials: {
                 // instagram: '#', // Закомментировано (ограничение доступа к Instagram в РФ)
                 vk: '#',
@@ -114,7 +114,7 @@ window.CONFIG = {
             name: 'Лагерта',
             role: 'Мастер реализма',
             bio: 'Создает потрясающие портреты богов, воинов и животных с ювелирной детализацией. Работает в технике Black & Grey.',
-            image: 'images/master_lagerta.png',
+            image: 'images/master_lagerta.webp',
             socials: {
                 // instagram: '#', // Закомментировано (ограничение доступа к Instagram в РФ)
                 vk: '#',
@@ -125,7 +125,7 @@ window.CONFIG = {
             name: 'Бьёрн',
             role: 'Специалист по рунам и графике',
             bio: 'Мастер тонких линий и священных рунических ставов (Гальдраставы). Разрабатывает уникальные защитные обереги.',
-            image: 'images/master_bjorn.png',
+            image: 'images/master_bjorn.webp',
             socials: {
                 // instagram: '#', // Закомментировано (ограничение доступа к Instagram в РФ)
                 vk: '#',
