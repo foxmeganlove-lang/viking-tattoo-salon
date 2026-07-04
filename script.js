@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el.closest('a').setAttribute('href', config.VK_URL);
         });
     }
+    // Ссылки на Instagram закомментированы/отключены из-за ограничений в РФ
     if (config.INSTAGRAM_URL) {
         document.querySelectorAll('.fa-instagram').forEach(el => {
             el.closest('a').setAttribute('href', config.INSTAGRAM_URL);
@@ -125,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let socialsHtml = '';
             if (master.socials) {
+                // Ссылка на Instagram отключена в РФ
                 if (master.socials.instagram && master.socials.instagram !== '#') {
                     socialsHtml += `<a href="${master.socials.instagram}" class="master-social-link" aria-label="Instagram мастера ${master.name}"><i class="fa-brands fa-instagram"></i></a>`;
                 }

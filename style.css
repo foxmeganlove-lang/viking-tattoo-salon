@@ -1310,9 +1310,16 @@ body.has-demo-badge {
     padding-top: 36px;
 }
 
+body.has-demo-badge .header {
+    top: 36px;
+}
+
 @media (max-width: 768px) {
     body.has-demo-badge {
         padding-top: 50px;
+    }
+    body.has-demo-badge .header {
+        top: 50px;
     }
 }
 
@@ -1656,6 +1663,10 @@ body.has-demo-badge {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 576px) {
@@ -1683,6 +1694,11 @@ body.has-demo-badge {
         padding: 2rem 1.5rem;
     }
     
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .faq-question {
         padding: 1.2rem 1.2rem;
         font-size: 0.95rem;
@@ -1698,6 +1714,19 @@ body.has-demo-badge {
     
     .contact-wrapper {
         padding: 2rem 1.2rem !important;
+    }
+    
+    .contact-info-block, .contact-form-block {
+        padding: 2rem 0;
+    }
+    
+    .about-image-wrapper {
+        margin-right: 10px;
+    }
+    
+    .image-accent-border {
+        left: 10px;
+        top: 10px;
     }
     
     .calc-wrapper {
