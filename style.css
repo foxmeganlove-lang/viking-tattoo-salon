@@ -1307,19 +1307,19 @@ p {
 }
 
 body.has-demo-badge {
-    padding-top: 36px;
+    padding-top: var(--demo-badge-height, 36px);
 }
 
 body.has-demo-badge .header {
-    top: 36px;
+    top: var(--demo-badge-height, 36px);
 }
 
 @media (max-width: 768px) {
     body.has-demo-badge {
-        padding-top: 50px;
+        padding-top: var(--demo-badge-height, 50px);
     }
     body.has-demo-badge .header {
-        top: 50px;
+        top: var(--demo-badge-height, 50px);
     }
 }
 

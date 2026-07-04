@@ -5,7 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================== */
     const config = window.CONFIG || {};
 
-    // Показ предупреждения о демо-режиме
+    // Показ предупреждения о демо-режиме и динамический расчет высоты
+    const updateDemoBadgeHeight = () => {
+        const badge = document.getElementById('demo-mode-badge');
+        if (badge) {
+            const height = badge.offsetHeight;
+            document.documentElement.style.setProperty('--demo-badge-height', `${height}px`);
+        } else {
+            document.documentElement.style.setProperty('--demo-badge-height', '0px');
+        }
+    };
+
     if (config.FORM_MODE === 'demo') {
         const badge = document.createElement('div');
         badge.className = 'demo-badge';
@@ -13,6 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
         badge.innerHTML = `<span>⚠️ Сайт работает в демонстрационном режиме. Заявки обрабатываются локально без отправки на сервер.</span>`;
         document.body.prepend(badge);
         document.body.classList.add('has-demo-badge');
+
+        // Первичный расчет высоты
+        updateDemoBadgeHeight();
+
+        // Подписка на ResizeObserver для отслеживания изменения высоты самого баннера
+        if (window.ResizeObserver) {
+            const observer = new ResizeObserver(() => {
+                updateDemoBadgeHeight();
+            });
+            observer.observe(badge);
+        }
+
+        // Пересчет при изменении размеров окна
+        window.addEventListener('resize', updateDemoBadgeHeight);
+
+        // Пересчет после загрузки веб-шрифтов
+        if (document.fonts) {
+            document.fonts.ready.then(() => {
+                updateDemoBadgeHeight();
+            });
+        }
     }
 
     // Применение общих текстовых полей
