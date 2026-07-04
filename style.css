@@ -499,6 +499,7 @@ p {
     color: var(--color-text-muted);
 }
 
+/* Prevent wrapper from stretching in grid to fix gold border layout */
 .about-image-wrapper {
     position: relative;
     align-self: center;
