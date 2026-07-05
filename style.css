@@ -38,6 +38,8 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     scroll-padding-top: calc(var(--demo-badge-height, 0px) + var(--header-height, 80px));
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -47,6 +49,10 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     letter-spacing: 0.02em;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 img {
@@ -176,6 +182,8 @@ p {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    max-width: 100%;
+    text-align: center;
 }
 
 .btn-lg {
@@ -340,10 +348,10 @@ p {
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
-    top: 0;
+    top: var(--demo-badge-height, 0px);
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100dvh - var(--demo-badge-height, 0px));
     background-color: var(--bg-primary);
     z-index: 99;
     display: flex;
@@ -351,7 +359,8 @@ p {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: calc(var(--header-height, 80px) + 2rem) 2rem 3rem;
+    overflow-y: auto;
     transform: translateY(-100%);
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -371,6 +380,12 @@ p {
     color: var(--color-accent);
 }
 
+.mobile-link.btn {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+}
+
 @media (max-width: 992px) {
     .nav { display: none; }
     .burger { display: flex; }
@@ -381,7 +396,7 @@ p {
 ---------------------------------------------------- */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     padding-top: 80px;
@@ -411,6 +426,20 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 2rem;
+}
+
+.hero-demo-note {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent-light);
+    border: 1px solid rgba(200, 155, 79, 0.45);
+    background-color: rgba(10, 10, 10, 0.55);
+    padding: 0.45rem 0.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .hero-subtitle {
@@ -457,6 +486,12 @@ p {
     .hero-title { font-size: 3.2rem; }
     .hero-actions { flex-direction: column; gap: 1rem; }
     .hero-features { flex-direction: column; gap: 1.5rem; }
+    .hero-actions .btn {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        white-space: normal;
+        text-align: center;
+    }
 }
 
 /* ----------------------------------------------------
@@ -675,6 +710,22 @@ p {
 @media (max-width: 992px) {
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-item { height: 350px; }
+    .gallery-overlay {
+        opacity: 1;
+        padding: 2rem;
+    }
+    .gallery-info {
+        transform: translateY(0);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .gallery-overlay {
+        opacity: 1;
+    }
+    .gallery-info {
+        transform: translateY(0);
+    }
 }
 
 /* ----------------------------------------------------
@@ -692,6 +743,7 @@ p {
 
 .calc-inputs {
     padding: 4rem;
+    min-width: 0;
 }
 
 .calc-results {
@@ -702,6 +754,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0;
 }
 
 @media (max-width: 992px) {
@@ -743,11 +796,18 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: inherit;
+    font: inherit;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-.calc-opt-box:hover {
+.calc-opt-box:hover,
+.calc-opt-box:focus-visible {
     border-color: var(--color-accent-dark);
     background-color: rgba(255, 255, 255, 0.04);
+    outline: none;
 }
 
 .calc-opt-box.active {
@@ -967,12 +1027,14 @@ p {
 
 .contact-info-block {
     padding: 5rem;
+    min-width: 0;
 }
 
 .contact-form-block {
     padding: 5rem;
     background-color: rgba(255, 255, 255, 0.01);
     border-left: 1px solid var(--color-border);
+    min-width: 0;
 }
 
 @media (max-width: 992px) {
@@ -1274,6 +1336,16 @@ p {
     transform: translateY(-3px);
 }
 
+.is-disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+.social-icon.is-disabled {
+    opacity: 0.45;
+    box-shadow: none;
+}
+
 .legal-text {
     font-size: 0.75rem;
     color: rgba(255,255,255,0.15);
@@ -1287,10 +1359,10 @@ p {
 
 /* Demo Badge */
 .demo-badge {
-    background-color: #ff9800;
-    color: #000000;
+    background-color: rgba(10, 10, 10, 0.96);
+    color: var(--color-accent-light);
     text-align: center;
-    padding: 0.6rem 1rem;
+    padding: 0.55rem 1rem;
     font-size: 0.85rem;
     font-weight: 600;
     position: fixed;
@@ -1298,8 +1370,10 @@ p {
     left: 0;
     width: 100%;
     z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    border-bottom: 1px solid rgba(200, 155, 79, 0.35);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
     font-family: var(--font-body);
+    letter-spacing: 0.04em;
 }
 
 .demo-badge span {
@@ -1432,6 +1506,9 @@ body.has-demo-badge .header {
 }
 
 .faq-question {
+    width: 100%;
+    border: 0;
+    background: transparent;
     padding: 1.5rem 2rem;
     font-family: var(--font-body);
     font-size: 1.1rem;
@@ -1443,6 +1520,12 @@ body.has-demo-badge .header {
     align-items: center;
     user-select: none;
     transition: var(--transition);
+    text-align: left;
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: -2px;
 }
 
 .faq-question::after {
@@ -1566,7 +1649,7 @@ body.has-demo-badge .header {
     z-index: 2;
 }
 
-.map-placeholder-link:hover .map-overlay {
+.map-placeholder-link:not(.is-disabled):hover .map-overlay {
     background-color: rgba(200, 155, 79, 0.25);
     color: var(--color-accent-light);
 }
@@ -1743,7 +1826,9 @@ body.has-demo-badge .header {
     
     /* Ensure the mobile menu aligns correctly and doesn't overlap text */
     .mobile-menu {
-        padding: 8rem 2rem 4rem 2rem;
+        justify-content: flex-start;
+        gap: 1.2rem;
+        padding: calc(var(--header-height, 76px) + 2rem) 1.2rem 2rem;
     }
     
     .mobile-link {

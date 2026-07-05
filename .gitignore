@@ -1,0 +1,4 @@
+﻿.agents/
+chrome-profile/
+edge-profile/
+*.log

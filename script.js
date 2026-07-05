@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const badge = document.createElement('div');
         badge.className = 'demo-badge';
         badge.id = 'demo-mode-badge';
-        badge.innerHTML = `<span>⚠️ Сайт работает в демонстрационном режиме. Заявки обрабатываются локально без отправки на сервер.</span>`;
+        const badgeText = document.createElement('span');
+        badgeText.textContent = 'Демонстрационный концепт сайта для тату-студии';
+        badge.appendChild(badgeText);
         document.body.prepend(badge);
         document.body.classList.add('has-demo-badge');
     }
@@ -62,22 +64,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const contactNotice = config.CONTACT_NOTICE || 'Контакты подключаются при адаптации сайта под клиента';
+    const disableLinkLikeElement = (el) => {
+        el.removeAttribute('href');
+        el.removeAttribute('target');
+        el.removeAttribute('rel');
+        el.setAttribute('aria-disabled', 'true');
+        el.classList.add('is-disabled');
+    };
+
     // Применение контактов
     if (config.PHONE) {
         document.querySelectorAll('.cfg-phone').forEach(el => {
             el.textContent = config.PHONE;
-            el.setAttribute('href', `tel:${config.PHONE.replace(/\D/g, '')}`);
+            const phoneDigits = config.PHONE.replace(/\D/g, '');
+            if (phoneDigits && el.tagName === 'A') {
+                el.setAttribute('href', `tel:+${phoneDigits}`);
+                el.removeAttribute('aria-disabled');
+                el.classList.remove('is-disabled');
+            }
+        });
+    } else {
+        document.querySelectorAll('.cfg-phone').forEach(el => {
+            el.textContent = contactNotice;
+            disableLinkLikeElement(el);
         });
     }
     if (config.EMAIL) {
         document.querySelectorAll('.cfg-email').forEach(el => {
             el.textContent = config.EMAIL;
-            el.setAttribute('href', `mailto:${config.EMAIL}`);
+            if (el.tagName === 'A') {
+                el.setAttribute('href', `mailto:${config.EMAIL}`);
+                el.removeAttribute('aria-disabled');
+                el.classList.remove('is-disabled');
+            }
+        });
+    } else {
+        document.querySelectorAll('.cfg-email').forEach(el => {
+            el.textContent = contactNotice;
+            disableLinkLikeElement(el);
         });
     }
     if (config.ADDRESS) {
         document.querySelectorAll('.cfg-address').forEach(el => {
             el.textContent = config.ADDRESS;
+        });
+    } else {
+        document.querySelectorAll('.cfg-address').forEach(el => {
+            el.textContent = contactNotice;
         });
     }
     if (config.HOURS) {
@@ -87,33 +121,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (config.MAP_LINK) {
         const mapLink = document.getElementById('cfg-map-link');
-        if (mapLink) {
+        if (mapLink && mapLink.tagName === 'A') {
             mapLink.setAttribute('href', config.MAP_LINK);
+            mapLink.removeAttribute('aria-disabled');
+            mapLink.classList.remove('is-disabled');
+        }
+    } else {
+        const mapLink = document.getElementById('cfg-map-link');
+        if (mapLink) {
+            disableLinkLikeElement(mapLink);
         }
     }
 
     // Применение ссылок на соцсети
-    if (config.TELEGRAM_URL) {
-        document.querySelectorAll('.fa-telegram').forEach(el => {
-            el.closest('a').setAttribute('href', config.TELEGRAM_URL);
+    const setSocialLinks = (iconSelector, url) => {
+        document.querySelectorAll(iconSelector).forEach(el => {
+            const link = el.closest('a');
+            if (!link) return;
+
+            if (url) {
+                link.setAttribute('href', url);
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener');
+                link.removeAttribute('aria-disabled');
+                link.classList.remove('is-disabled');
+            } else {
+                disableLinkLikeElement(link);
+            }
         });
-    }
-    if (config.WHATSAPP_URL) {
-        document.querySelectorAll('.fa-whatsapp').forEach(el => {
-            el.closest('a').setAttribute('href', config.WHATSAPP_URL);
-        });
-    }
-    if (config.VK_URL) {
-        document.querySelectorAll('.fa-vk').forEach(el => {
-            el.closest('a').setAttribute('href', config.VK_URL);
-        });
-    }
-    // Ссылки на Instagram закомментированы/отключены из-за ограничений в РФ
-    if (config.INSTAGRAM_URL) {
-        document.querySelectorAll('.fa-instagram').forEach(el => {
-            el.closest('a').setAttribute('href', config.INSTAGRAM_URL);
-        });
-    }
+    };
+
+    setSocialLinks('.fa-telegram', config.TELEGRAM_URL);
+    setSocialLinks('.fa-whatsapp', config.WHATSAPP_URL);
+    setSocialLinks('.fa-vk', config.VK_URL);
+    setSocialLinks('.fa-instagram', config.INSTAGRAM_URL);
 
     // Рендеринг преимуществ (руны в первом экране)
     const featuresContainer = document.querySelector('.hero-features');
@@ -187,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="master-role accent">${master.role}</span>
                     <p class="master-bio">${master.bio}</p>
                     <div class="master-socials">
-                        ${socialsHtml || `<span class="text-muted">Контакты уточняйте в студии</span>`}
+                        ${socialsHtml || `<span class="text-muted">Соцсети подключаются при адаптации</span>`}
                     </div>
                 </div>
             `;
@@ -203,9 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('div');
             item.className = 'faq-item';
             item.innerHTML = `
-                <div class="faq-question" id="faq-q-${index}" aria-expanded="false" aria-controls="faq-a-${index}">
+                <button type="button" class="faq-question" id="faq-q-${index}" aria-expanded="false" aria-controls="faq-a-${index}">
                     ${faq.question}
-                </div>
+                </button>
                 <div class="faq-answer" id="faq-a-${index}" role="region" aria-labelledby="faq-q-${index}">
                     <p>${faq.answer}</p>
                 </div>
@@ -257,9 +298,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     const toggleMenu = () => {
-        burgerBtn.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
+        const isOpen = !mobileMenu.classList.contains('active');
+        burgerBtn.classList.toggle('active', isOpen);
+        mobileMenu.classList.toggle('active', isOpen);
+        document.body.classList.toggle('no-scroll', isOpen);
+        burgerBtn.setAttribute('aria-expanded', String(isOpen));
     };
 
     burgerBtn.addEventListener('click', toggleMenu);
@@ -296,9 +339,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             document.querySelectorAll(`.calc-opt-box[data-name="${category}"]`).forEach(sibling => {
                 sibling.classList.remove('active');
+                sibling.setAttribute('aria-pressed', 'false');
             });
             
             box.classList.add('active');
+            box.setAttribute('aria-pressed', 'true');
 
             if (category === 'size') {
                 selectedSizePrice = parseFloat(box.getAttribute('data-price'));
@@ -397,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Валидация согласия
         if (!agreedCheckbox.checked) {
-            document.getElementById('agreement-error').textContent = 'Необходимо ваше согласие на обработку данных';
+            document.getElementById('agreement-error').textContent = 'Подтвердите, что понимаете демо-режим формы';
             agreedCheckbox.closest('.form-checkbox-group')?.classList.add('invalid');
             isValid = false;
         }
@@ -436,12 +481,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 formSuccess.classList.remove('hidden');
 
                 if (successTitle && successText) {
-                    successTitle.innerHTML = `Зов услышан <span class="accent">(Демо)</span>!`;
-                    successText.innerHTML = `
-                        Спасибо, <strong>${formData.name}</strong>! Это демонстрационный шаблон сайта.<br>
-                        В реальной версии заявка с телефоном <strong>${formData.phone}</strong> 
-                        и предпочтением связи в <strong>${formData.contact_method}</strong> была бы отправлена на настроенный эндпоинт.
-                    `;
+                    successTitle.textContent = 'Демо-форма';
+                    successText.textContent = 'Демо-форма: заявка не отправляется. В версии для клиента подключаются Telegram, почта или CRM.';
                 }
 
                 // Сброс формы
@@ -498,9 +539,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const phoneError = document.getElementById('phone-error');
                 if (phoneError) {
-                    phoneError.textContent = 'Не удалось отправить заявку. Проверьте интернет-соединение или свяжитесь с нами напрямую по телефону.';
+                    phoneError.textContent = 'Не удалось отправить заявку. Проверьте настройки отправки или подключите рабочий канал связи.';
                 } else {
-                    alert('Не удалось отправить заявку. Пожалуйста, позвоните нам по телефону или попробуйте позже.');
+                    alert('Не удалось отправить заявку. Проверьте настройки отправки или попробуйте позже.');
                 }
             });
         }

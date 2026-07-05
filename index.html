@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valhalla Ink — Премиум Тату-Салон в Стиле Викингов</title>
+    <title>Valhalla Ink — демонстрационный концепт сайта для тату-студии</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Премиум тату-салон в скандинавском и нордическом стиле. Авторские эскизы, рунические орнаменты, дотворк и черный реализм. Безукоризненная стерильность.">
-    <meta name="keywords" content="тату салон, тату викинги, скандинавские татуировки, руны тату, орнаментал тату, реализм тату, Москва тату">
+    <meta name="description" content="Демонстрационный шаблон лендинга для тату-студии в скандинавской эстетике: первый экран, галерея, калькулятор, FAQ и демо-форма без отправки данных.">
+    <meta name="keywords" content="демо сайт тату студии, шаблон лендинга, портфолио веб-разработчика, скандинавский дизайн, калькулятор стоимости">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="">
     
     <!-- Open Graph for Social Networks -->
-    <meta property="og:title" content="Valhalla Ink — Премиум Тату-Салон в Стиле Викингов">
-    <meta property="og:description" content="Авторские скандинавские татуировки, рунические орнаменты и черный реализм. Разработка индивидуального эскиза бесплатно.">
+    <meta property="og:title" content="Valhalla Ink — демонстрационный концепт сайта для тату-студии">
+    <meta property="og:description" content="Портфолио-кейс лендинга в викинг-стиле с калькулятором, галереей, FAQ и демо-формой без отправки данных.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
     <meta property="og:image" content="images/hero_bg.webp">
     
     <!-- Favicon -->
@@ -32,37 +30,18 @@
     
     <link rel="stylesheet" href="style.css">
     
-    <!-- LocalBusiness Schema.org Structured Data -->
+    <!-- Demo portfolio project Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TattooParlor",
-      "name": "Valhalla Ink",
-      "image": "images/studio.webp",
-      "url": "",
-      "telephone": "+7 (495) 789-45-67",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "ул. Руническая, д. 9",
-        "addressLocality": "Москва",
-        "postalCode": "101000",
-        "addressCountry": "RU"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "12:00",
-        "closes": "21:00"
-      },
-      "priceRange": "$$"
+      "@type": "WebPage",
+      "name": "Valhalla Ink — демонстрационный концепт сайта для тату-студии",
+      "description": "Портфолио-кейс лендинга для тату-студии в скандинавской эстетике. Изображения, контакты и бизнес-данные являются демонстрационными.",
+      "inLanguage": "ru",
+      "about": {
+        "@type": "CreativeWork",
+        "name": "Демонстрационный шаблон лендинга для тату-студии"
+      }
     }
     </script>
 </head>
@@ -82,9 +61,9 @@
                 <a href="#gallery" class="nav-link">Галерея</a>
                 <a href="#masters" class="nav-link">Мастера</a>
                 <a href="#faq" class="nav-link">Вопросы</a>
-                <a href="#contacts" class="nav-link btn btn-outline nav-btn">Записаться</a>
+                <a href="#contacts" class="nav-link btn btn-outline nav-btn">К демо-форме</a>
             </nav>
-            <button class="burger" id="burger-btn" aria-label="Открыть меню">
+            <button class="burger" id="burger-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -100,7 +79,7 @@
         <a href="#gallery" class="mobile-link">Галерея</a>
         <a href="#masters" class="mobile-link">Мастера</a>
         <a href="#faq" class="mobile-link">Вопросы</a>
-        <a href="#contacts" class="mobile-link btn btn-primary">Записаться</a>
+        <a href="#contacts" class="mobile-link btn btn-primary">К демо-форме</a>
     </div>
 
     <!-- Hero Section -->
@@ -108,23 +87,23 @@
         <div class="hero-bg" style="background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.95)), url('images/hero_bg.webp');"></div>
         <div class="container hero-content">
             <h1 class="hero-title">Древняя Эстетика Севера <br><span class="accent">На Твоей Коже</span></h1>
-            <p class="hero-subtitle">Премиальные скандинавские татуировки от лучших мастеров. Руны, орнаменты, реализм и дух викингов в каждой детали.</p>
+            <p class="hero-subtitle">Атмосферный шаблон лендинга в скандинавской эстетике: первый экран, услуги, галерея, калькулятор стоимости и демо-форма заявки.</p>
             <div class="hero-actions">
-                <a href="#contacts" class="btn btn-primary btn-lg">Занять место в Вальхалле</a>
+                <a href="#contacts" class="btn btn-primary btn-lg">Открыть форму</a>
                 <a href="#calculator" class="btn btn-outline btn-lg">Рассчитать стоимость</a>
             </div>
             <div class="hero-features">
                 <div class="feature-item">
                     <span class="feature-icon">ᛟ</span>
-                    <span class="feature-text">Авторские эскизы</span>
+                    <span class="feature-text">Готовая структура</span>
                 </div>
                 <div class="feature-item">
                     <span class="feature-icon">ᛉ</span>
-                    <span class="feature-text">100% Стерильность</span>
+                    <span class="feature-text">Демо-калькулятор</span>
                 </div>
                 <div class="feature-item">
                     <span class="feature-icon">ᚦ</span>
-                    <span class="feature-text">Пожизненный уход</span>
+                    <span class="feature-text">Без отправки данных</span>
                 </div>
             </div>
         </div>
@@ -136,22 +115,22 @@
             <div class="grid grid-2">
                 <div class="about-info">
                     <h2 class="section-title">Обитель <br><span class="accent">Северных Традиций</span></h2>
-                    <p class="text-lead">VALHALLA INK — это не просто тату-салон, а закрытый клан единомышленников, возрождающих древнюю сакральную культуру Скандинавии.</p>
-                    <p>Каждая татуировка для нас — это ритуал. Мы не делаем шаблонных «картинок из интернета». Наши художники разрабатывают индивидуальные орнаменты, основываясь на археологических находках, резьбе по дереву и камням эпохи викингов.</p>
-                    <p>Мы чтим традиции прошлого, но работаем на самом современном и безопасном оборудовании, соблюдая строжайшие медицинские стандарты стерильности.</p>
+                    <p class="text-lead">VALHALLA INK — вымышленный бренд для демонстрации того, как может выглядеть сильный лендинг тату-студии в нордической эстетике.</p>
+                    <p>В шаблоне сохранены характер, драматичный первый экран, карточки услуг, галерея, FAQ, калькулятор стоимости и форма заявки. При адаптации под клиента сюда подставляются реальные тексты, фотографии, контакты и юридические блоки.</p>
+                    <p>Этот проект не представляет реально существующий салон и не принимает настоящие заявки.</p>
                     
                     <div class="about-stats">
                         <div class="stat-item">
-                            <span class="stat-num accent">7+</span>
-                            <span class="stat-label">Лет опыта мастеров</span>
+                            <span class="stat-num accent">01</span>
+                            <span class="stat-label">Готовый первый экран</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-num accent">3000+</span>
-                            <span class="stat-label">Довольных воинов</span>
+                            <span class="stat-num accent">02</span>
+                            <span class="stat-label">Интерактивный расчет</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-num accent">100%</span>
-                            <span class="stat-label">Уникальность эскизов</span>
+                            <span class="stat-num accent">03</span>
+                            <span class="stat-label">Демо-форма заявки</span>
                         </div>
                     </div>
                 </div>
@@ -253,7 +232,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title">Стены <span class="accent">Нашей Славы</span></h2>
-                <p class="section-subtitle">Фотографии реальных работ, выполненных в нашей студии. Никаких чужих эскизов — только чистая гордость.</p>
+                <p class="section-subtitle">Демонстрационные AI-визуализации для показа структуры портфолио. Эти изображения не являются работами реальных мастеров.</p>
             </div>
             
             <div class="gallery-grid">
@@ -306,49 +285,49 @@
                     
                     <div class="form-group">
                         <label class="form-label">1. Желаемый размер татуировки</label>
-                        <div class="calc-options grid-3-flat">
-                            <div class="calc-opt-box active" data-name="size" data-value="small" data-price="8000" data-time="2-3 часа">
+                        <div class="calc-options grid-3-flat" role="group" aria-label="Желаемый размер татуировки">
+                            <button type="button" class="calc-opt-box active" data-name="size" data-value="small" data-price="8000" data-time="2-3 часа" aria-pressed="true">
                                 <span class="opt-title">Миниатюра</span>
                                 <span class="opt-desc">До 10х10 см</span>
-                            </div>
-                            <div class="calc-opt-box" data-name="size" data-value="medium" data-price="18000" data-time="1 сеанс (6ч)">
+                            </button>
+                            <button type="button" class="calc-opt-box" data-name="size" data-value="medium" data-price="18000" data-time="1 сеанс (6ч)" aria-pressed="false">
                                 <span class="opt-title">Средний размер</span>
                                 <span class="opt-desc">Предплечье / Икра</span>
-                            </div>
-                            <div class="calc-opt-box" data-name="size" data-value="large" data-price="45000" data-time="3-4 сеанса">
+                            </button>
+                            <button type="button" class="calc-opt-box" data-name="size" data-value="large" data-price="45000" data-time="3-4 сеанса" aria-pressed="false">
                                 <span class="opt-title">Крупный проект</span>
                                 <span class="opt-desc">Рукав / Спина</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">2. Уровень детализации и стиль</label>
-                        <div class="calc-options grid-3-flat">
-                            <div class="calc-opt-box active" data-name="style" data-value="rune" data-multiplier="1.0">
+                        <div class="calc-options grid-3-flat" role="group" aria-label="Уровень детализации и стиль">
+                            <button type="button" class="calc-opt-box active" data-name="style" data-value="rune" data-multiplier="1.0" aria-pressed="true">
                                 <span class="opt-title">Руны и символы</span>
                                 <span class="opt-desc">Графика, контур</span>
-                            </div>
-                            <div class="calc-opt-box" data-name="style" data-value="ornament" data-multiplier="1.2">
+                            </button>
+                            <button type="button" class="calc-opt-box" data-name="style" data-value="ornament" data-multiplier="1.2" aria-pressed="false">
                                 <span class="opt-title">Сложный орнамент</span>
                                 <span class="opt-desc">Симметрия, узлы</span>
-                            </div>
-                            <div class="calc-opt-box" data-name="style" data-value="realism" data-multiplier="1.5">
+                            </button>
+                            <button type="button" class="calc-opt-box" data-name="style" data-value="realism" data-multiplier="1.5" aria-pressed="false">
                                 <span class="opt-title">Реализм / Портрет</span>
                                 <span class="opt-desc">Тени, лица, объем</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">3. Наличие старой татуировки под перекрытие?</label>
-                        <div class="calc-options grid-2-flat">
-                            <div class="calc-opt-box active" data-name="coverup" data-value="no" data-add="0">
+                        <div class="calc-options grid-2-flat" role="group" aria-label="Наличие старой татуировки под перекрытие">
+                            <button type="button" class="calc-opt-box active" data-name="coverup" data-value="no" data-add="0" aria-pressed="true">
                                 <span class="opt-title">Нет (Чистая кожа)</span>
-                            </div>
-                            <div class="calc-opt-box" data-name="coverup" data-value="yes" data-add="5000">
+                            </button>
+                            <button type="button" class="calc-opt-box" data-name="coverup" data-value="yes" data-add="5000" aria-pressed="false">
                                 <span class="opt-title">Да (Требуется Cover-Up)</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -397,11 +376,7 @@
                         <span class="master-role accent">Основатель, орнаменталист</span>
                         <p class="master-bio">Специализируется на масштабных рукавах, геометрических узорах и точечной технике (дотворк). Опыт работы более 10 лет.</p>
                         <div class="master-socials">
-                            <!-- Instagram закомментирован из-за ограничений доступа в РФ. Основные соцсети — VK и Telegram.
-                            <a href="#" class="master-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            -->
-                            <a href="#" class="master-social-link" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
-                            <a href="#" class="master-social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                            <span class="text-muted">Соцсети подключаются при адаптации</span>
                         </div>
                     </div>
                 </div>
@@ -414,11 +389,7 @@
                         <span class="master-role accent">Мастер реализма</span>
                         <p class="master-bio">Создает потрясающие портреты богов и воинов с ювелирной детализацией. Работает в технике Black & Grey.</p>
                         <div class="master-socials">
-                            <!-- Instagram закомментирован из-за ограничений доступа в РФ. Основные соцсети — VK и Telegram.
-                            <a href="#" class="master-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            -->
-                            <a href="#" class="master-social-link" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
-                            <a href="#" class="master-social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                            <span class="text-muted">Соцсети подключаются при адаптации</span>
                         </div>
                     </div>
                 </div>
@@ -431,11 +402,7 @@
                         <span class="master-role accent">Специалист по рунам и графике</span>
                         <p class="master-bio">Мастер тонких линий и священных рунических ставов (Гальдраставы). Разрабатывает уникальные защитные обереги.</p>
                         <div class="master-socials">
-                            <!-- Instagram закомментирован из-за ограничений доступа в РФ. Основные соцсети — VK и Telegram.
-                            <a href="#" class="master-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            -->
-                            <a href="#" class="master-social-link" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
-                            <a href="#" class="master-social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                            <span class="text-muted">Соцсети подключаются при адаптации</span>
                         </div>
                     </div>
                 </div>
@@ -448,7 +415,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title">Вопросы и <span class="accent">Ответы</span></h2>
-                <p class="section-subtitle">Отвечаем на частые опасения и вопросы воинов перед первым шагом в наш чертог.</p>
+                <p class="section-subtitle">Пример FAQ-блока для будущего клиента: вопросы и ответы заменяются на реальные при адаптации проекта.</p>
             </div>
             <div class="faq-container" id="faq-container">
                 <!-- FAQ items populated dynamically from config.js -->
@@ -461,28 +428,28 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title">Путь <span class="accent">Воина</span></h2>
-                <p class="section-subtitle">От идеи в твоей голове до вечного знака на твоей коже — всего 4 простых шага.</p>
+                <p class="section-subtitle">Пример сценария работы тату-студии: при запуске под клиента шаги заменяются на реальный процесс записи и оплаты.</p>
             </div>
             <div class="steps-grid">
                 <div class="step-card card-premium">
                     <div class="step-num accent">01</div>
                     <h3>Заявка</h3>
-                    <p>Заполни форму на сайте или напиши нам в мессенджер. Мы свяжемся с тобой для первого знакомства.</p>
+                    <p>Посетитель заполняет форму на сайте. В демо-версии заявка остается на странице и никуда не отправляется.</p>
                 </div>
                 <div class="step-card card-premium">
                     <div class="step-num accent">02</div>
                     <h3>Консультация</h3>
-                    <p>Бесплатно обсудим твою идею, подберем мастера и сделаем предварительный набросок эскиза.</p>
+                    <p>В клиентской версии сюда можно добавить реальный порядок консультации, бриф и подбор мастера.</p>
                 </div>
                 <div class="step-card card-premium">
                     <div class="step-num accent">03</div>
                     <h3>Выбор даты</h3>
-                    <p>Согласуем удобное время сеанса. Для бронирования даты вносится небольшой фиксированный залог.</p>
+                    <p>При адаптации подключаются реальные каналы связи, календарь, CRM или ручная обработка заявок.</p>
                 </div>
                 <div class="step-card card-premium">
                     <div class="step-num accent">04</div>
                     <h3>Сеанс</h3>
-                    <p>Приходи в назначенный час. Наносим татуировку в уютной атмосфере и дарим набор для ухода.</p>
+                    <p>Финальный шаг описывает услугу клиента и заменяется настоящими правилами студии перед публикацией.</p>
                 </div>
             </div>
         </div>
@@ -493,49 +460,49 @@
         <div class="container">
             <div class="grid grid-2 card-premium contact-wrapper">
                 <div class="contact-info-block">
-                    <h2 class="section-title-sm">Приди на <span class="accent">Совет Клана</span></h2>
-                    <p class="contact-desc">Заполни форму, чтобы получить бесплатную консультацию. Мы поможем определиться с идеей, разработаем эскиз и рассчитаем точное время.</p>
+                    <h2 class="section-title-sm">Демо <span class="accent">Контактов</span></h2>
+                    <p class="contact-desc">Контактный блок сохранен как часть шаблона. Контакты подключаются при адаптации сайта под клиента.</p>
                     
                     <div class="contact-list">
                         <div class="contact-item">
                             <i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i>
                             <div>
-                                <h4>Адрес Чертога</h4>
-                                <p class="cfg-address">г. Москва, ул. Руническая, д. 9 (м. Курская)</p>
+                                <h4>Адрес студии</h4>
+                                <p class="cfg-address">Контакты подключаются при адаптации сайта под клиента</p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <i class="fa-solid fa-phone contact-icon" aria-hidden="true"></i>
                             <div>
-                                <h4>Связь с ярлом</h4>
-                                <p><a href="tel:+74957894567" class="cfg-phone">+7 (495) 789-45-67</a></p>
+                                <h4>Телефон</h4>
+                                <p><span class="cfg-phone">Контакты подключаются при адаптации сайта под клиента</span></p>
                             </div>
                         </div>
 
                         <div class="contact-item">
                             <i class="fa-solid fa-envelope contact-icon" aria-hidden="true"></i>
                             <div>
-                                <h4>Почта воронов</h4>
-                                <p><a href="mailto:demo@valhalla-ink-studio.example" class="cfg-email">demo@valhalla-ink-studio.example</a></p>
+                                <h4>Email</h4>
+                                <p><span class="cfg-email">Контакты подключаются при адаптации сайта под клиента</span></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="working-hours">
-                        <h4>Часы приема воинов:</h4>
-                        <p class="cfg-hours">Каждый день без выходных с 12:00 до 21:00</p>
+                        <h4>График работы:</h4>
+                        <p class="cfg-hours">Расписание добавляется после адаптации под реальную студию</p>
                     </div>
                     
                     <!-- Map Placeholder Widget -->
                     <div class="map-placeholder-wrapper">
-                        <a href="https://yandex.ru/maps/-/CDuP5B9D" target="_blank" rel="noopener" class="map-placeholder-link" id="cfg-map-link">
+                        <div class="map-placeholder-link is-disabled" id="cfg-map-link" aria-label="Демонстрационная карта без ссылки">
                             <div class="map-overlay">
                                 <i class="fa-solid fa-map-location-dot map-placeholder-icon" aria-hidden="true"></i>
-                                <span>Открыть интерактивную карту</span>
+                                <span>Карта подключается при адаптации сайта под клиента</span>
                             </div>
                             <div class="map-static-bg"></div>
-                        </a>
+                        </div>
                     </div>
                 </div>
 
@@ -562,7 +529,7 @@
                                 <option value="WhatsApp">WhatsApp</option>
                                 <option value="Звонок">Телефонный звонок</option>
                             </select>
-                            <label for="user-contact-method" class="floating-label select-label">Как с вами связаться? *</label>
+                            <label for="user-contact-method" class="floating-label select-label">Предпочтительный канал связи в клиентской версии *</label>
                             <span class="error-label" id="method-error"></span>
                         </div>
 
@@ -584,20 +551,20 @@
 
                         <div class="form-checkbox-group">
                             <div class="form-checkbox">
-                                <input type="checkbox" id="user-agreed" required checked>
-                                <label for="user-agreed">Я соглашаюсь на обработку персональных данных и готов к боли *</label>
+                                <input type="checkbox" id="user-agreed" required>
+                                <label for="user-agreed">Понимаю, что это демо-форма и заявка не отправится *</label>
                             </div>
                             <span class="error-label" id="agreement-error"></span>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">Отправить зов</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">Проверить демо-форму</button>
                     </form>
                     
                     <!-- Success Message Widget -->
                     <div id="form-success" class="form-success-message hidden">
                         <span class="success-rune">᚛ᛗ᚜</span>
-                        <h3 id="success-title">Твой зов услышан!</h3>
-                        <p id="success-text">Мастер свяжется с тобой в течение 30 минут, чтобы согласовать время консультации.</p>
+                        <h3 id="success-title">Демо-форма</h3>
+                        <p id="success-text">Демо-форма: заявка не отправляется. В версии для клиента подключаются Telegram, почта или CRM.</p>
                         <button class="btn btn-outline" id="reset-form-btn">Отправить еще раз</button>
                     </div>
                 </div>
@@ -613,7 +580,7 @@
                     <span class="rune-logo">ᚠ</span>
                     <span class="logo-text">VALHALLA <span class="accent">INK</span></span>
                 </a>
-                <p class="footer-desc">Премиум татуировки, вдохновленные наследием древнего Севера. Только индивидуальный подход, безукоризненная стерильность и преданность искусству.</p>
+                <p class="footer-desc">Демонстрационный шаблон лендинга для тату-студии в нордической эстетике. Проект показывает структуру, визуальный стиль и интерактивные блоки будущего сайта.</p>
             </div>
             <div class="footer-links">
                 <h4>Чертоги</h4>
@@ -623,16 +590,13 @@
                 <a href="#calculator" class="footer-link">Калькулятор</a>
             </div>
             <div class="footer-social">
-                <h4>Связаться</h4>
+                <h4>Демо-каналы</h4>
                 <div class="social-icons">
-                    <a href="#" class="social-icon" aria-label="VKontakte"><i class="fa-brands fa-vk"></i></a>
-                    <!-- Instagram закомментирован из-за ограничений доступа в РФ. Основные соцсети — VK и Telegram.
-                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    -->
-                    <a href="#" class="social-icon" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <span class="social-icon is-disabled" aria-label="VKontakte подключается при адаптации"><i class="fa-brands fa-vk"></i></span>
+                    <span class="social-icon is-disabled" aria-label="Telegram подключается при адаптации"><i class="fa-brands fa-telegram"></i></span>
+                    <span class="social-icon is-disabled" aria-label="WhatsApp подключается при адаптации"><i class="fa-brands fa-whatsapp"></i></span>
                 </div>
-                <p class="legal-text">© 2026 VALHALLA INK. Все права защищены. 18+</p>
+                <p class="legal-text">Проект создан как демонстрационный шаблон. Изображения и данные используются только для показа структуры и функционала сайта. Изображения не являются работами реальных мастеров.</p>
             </div>
         </div>
     </footer>
