@@ -1759,6 +1759,18 @@ body.has-demo-badge .header {
     .container {
         padding: 0 1.2rem;
     }
+    .about-info, .about-image-wrapper {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .about-image {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
     
     .about-stats {
         flex-direction: column;
